@@ -10,7 +10,7 @@
     <link rel = "icon" href = "img/logo.png" type = "image/x-icon">
   </head>
 
-  
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #50C878;">
       <div class="container-fluid">
@@ -19,8 +19,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-
-
           <ul class="navbar-nav">
             <li class="nav-item btn btn-secondary">
               <!-- <a class="nav-link text-white" href="index.php">Home</a> -->
@@ -31,9 +29,7 @@
               <a class="nav-link text-white" href="https://www.linkedin.com/in/arpan-seal-9a27b6210/" target="_blank" style="margin: auto;">About Me</a>
             </li>
           </ul>
-
         </div>
-
       </div>
     </nav>
   </body>
