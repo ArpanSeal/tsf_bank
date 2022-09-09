@@ -25,10 +25,12 @@
 
         <ul class="navbar-nav">
           <li class="nav-item btn btn-secondary">
-            <a class="nav-link text-white" href="index.php">Home</a>
+            <!-- <a class="nav-link text-white" href="index.php">Home</a> -->
+            <a class="nav-link text-white" href="index.php" style="
+            margin: auto;">Home</a>
           </li>
           <li class="nav-item btn btn-secondary">
-            <a class="nav-link text-white" href="https://www.linkedin.com/in/arpan-seal-9a27b6210/">About Me</a>
+            <a class="nav-link text-white" href="https://www.linkedin.com/in/arpan-seal-9a27b6210/" target="_blank" style="margin: auto;">About Me</a>
           </li>
         </ul>
 
