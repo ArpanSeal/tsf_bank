@@ -10,7 +10,7 @@
   <link rel = "icon" href = "img/logo.png" type = "image/x-icon">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #50C878;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #50C878;">
     <div class="container-fluid">
       <a class="navbar-brand logo" href="index.php"><img src="img/logo.png" alt="logo" height=50px width=50px></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
