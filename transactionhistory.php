@@ -16,7 +16,7 @@
   include 'nav.php';
 ?>
 
-	<div class="container">
+	<div class="container my-3">
         <h1>Transaction History</h1>
         
        <br>
