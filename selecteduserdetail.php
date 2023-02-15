@@ -89,7 +89,21 @@ if(isset($_POST['submit']))
 			transform: scale(1.1);
 			color:white;
 		}
-
+        .bgtrans{
+            margin-bottom: 0 !important;
+            border: 0 !important;
+            top: 0px;
+        }
+        .bgtrans::before{
+            content: "";
+            background-color: #d7c1ff;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+        }
     </style>
 </head>
 
@@ -99,71 +113,87 @@ if(isset($_POST['submit']))
   include 'nav.php';
 ?>
 
-	<div class="container">
-        <h2 class="text-center pt-4">Transaction</h2>
-            <?php
-                include 'config.php';
-                $sid=$_GET['id'];
-                $sql = "SELECT * FROM  users where id=$sid";
-                $result=mysqli_query($conn,$sql);
-                if(!$result)
-                {
-                    echo "Error : ".$sql."<br>".mysqli_error($conn);
-                }
-                $rows=mysqli_fetch_assoc($result);
-            ?>
-            <form method="post" name="tcredit" class="tabletext" ><br>
-        <div>
-            <table class="table table-striped table-condensed table-bordered">
-                <tr>
-                    <th class="text-center">Id</th>
-                    <th class="text-center">Name</th>
-                    <th class="text-center">Email</th>
-                    <th class="text-center">Balance</th>
-                </tr>
-                <tr>
-                    <td class="py-2"><?php echo $rows['id'] ?></td>
-                    <td class="py-2"><?php echo $rows['name'] ?></td>
-                    <td class="py-2"><?php echo $rows['email'] ?></td>
-                    <td class="py-2"><?php echo $rows['balance'] ?></td>
-                </tr>
-            </table>
-        </div>
-        <br><br><br>
-        <label>Transfer To:</label>
-        <select name="to" class="form-control" required>
-            <option value="" disabled selected>Choose</option>
-            <?php
-                include 'config.php';
-                $sid=$_GET['id'];
-                $sql = "SELECT * FROM users where id!=$sid";
-                $result=mysqli_query($conn,$sql);
-                if(!$result)
-                {
-                    echo "Error ".$sql."<br>".mysqli_error($conn);
-                }
-                while($rows = mysqli_fetch_assoc($result)) {
-            ?>
-                <option class="table" value="<?php echo $rows['id'];?>" >
+	<div class="bghis container my-3">
+        <h1 class="mbtn">Transaction</h1>
+        <?php
+            include 'config.php';
+            $sid=$_GET['id'];
+            $sql = "SELECT * FROM  users where id=$sid";
+            $result=mysqli_query($conn,$sql);
+            if(!$result)
+            {
+                echo "Error : ".$sql."<br>".mysqli_error($conn);
+            }
+            $rows=mysqli_fetch_assoc($result);
+        ?>
+
+        <div class="bgtrans">
+        <div class="container my-3">
+        <br>
+            <div class="row">
+                <div class="col">
+                <div class="table-responsive-sm">
+                    <table class="table table-hover table-sm table-striped table-condensed table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Id</th>
+                                <th class="text-center">Name</th>
+                                <th class="text-center">Email</th>
+                                <th class="text-center">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2"><?php echo $rows['id'] ?></td>
+                                <td class="py-2"><?php echo $rows['name'] ?></td>
+                                <td class="py-2"><?php echo $rows['email'] ?></td>
+                                <td class="py-2"><?php echo $rows['balance'] ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+        
+
+        <form method="post" name="tcredit" class="tabletext" ><br>
+            <label>Transfer To:</label>
+            <select name="to" class="form-control" required>
+                <option value="" disabled selected>Choose</option>
+                <?php
+                    include 'config.php';
+                    $sid=$_GET['id'];
+                    $sql = "SELECT * FROM users where id!=$sid";
+                    $result=mysqli_query($conn,$sql);
+                    if(!$result)
+                    {
+                        echo "Error ".$sql."<br>".mysqli_error($conn);
+                    }
+                    while($rows = mysqli_fetch_assoc($result)) {
+                ?>
+                    <option class="table" value="<?php echo $rows['id'];?>" >
+                    
+                        <?php echo $rows['name'] ;?> (Balance: 
+                        <?php echo $rows['balance'] ;?> ) 
                 
-                    <?php echo $rows['name'] ;?> (Balance: 
-                    <?php echo $rows['balance'] ;?> ) 
-               
-                </option>
-            <?php 
+                    </option>
+                <?php 
                 } 
-            ?>
+                ?>
+            </select>
             <div>
-        </select>
-        <br>
-        <br>
-            <label>Amount:</label>
-            <input type="number" class="form-control" name="amount" required>   
-            <br><br>
-                <div class="text-center" >
-            <button class="btn mt-3" name="submit" type="submit" id="myBtn">Transfer</button>
+                <br>
+                <br>
+                <label>Amount:</label>
+                <input type="number" class="form-control" name="amount" required>   
+                <br><br>
+                    <div class="text-center" >
+                <button class="btn mt-3" name="submit" type="submit" id="myBtn">Transfer</button>
             </div>
         </form>
+    </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
