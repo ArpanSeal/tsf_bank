@@ -18,16 +18,17 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `users` (`id`, `name`, `email`, `balance`) VALUES
-(1, 'Ayan Deb', 'ayan@gmail.com', 50000),
-(2, 'Bikash Sen', 'bik@gmail.com', 30000),
-(3, 'Shouvik Samadder', 'samadder@gmail.com', 40000),
-(4, 'Ishani Seal', 'seal@gmail.com', 50000),
-(5, 'Abhik Chanda', 'chanda@gmail.com', 40000),
-(6, 'Shirshak Banerjee', 'banerjee@gmail.com', 30000),
-(7, 'Anay Panja', 'panja@gmail.com', 50000),
-(8, 'Anirban Biswas', 'biswas@gmail.com', 40000),
-(9, 'Bhaskar Panja', 'timon@gmail.com', 30000),
-(10, 'Rohit Biswas', 'tubai@gmail.com', 50000);
+(1, 'Arpan Seal', 'arpanseal1234@gmail.com', 99999999),
+(2, 'Ayan Deb', 'ayan@gmail.com', 50000),
+(3, 'Bikash Sen', 'bik@gmail.com', 30000),
+(4, 'Shouvik Samadder', 'samadder@gmail.com', 40000),
+(5, 'Ishani Seal', 'seal@gmail.com', 50000),
+(6, 'Manish Shee', 'mshee@gmail.com', 40000),
+(7, 'Shirshak Banerjee', 'banerjee@gmail.com', 30000),
+(8, 'Anay Panja', 'panja@gmail.com', 50000),
+(9, 'Anirban Biswas', 'biswas@gmail.com', 40000),
+(10, 'Bhaskar Panja', 'timon@gmail.com', 30000),
+(11, 'Rohit Biswas', 'tubai@gmail.com', 50000);
 
 ALTER TABLE `transaction`
   ADD PRIMARY KEY (`sno`);

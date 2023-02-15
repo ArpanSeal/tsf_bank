@@ -8,6 +8,23 @@
     <link rel="stylesheet" type="text/css" href="css/table.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel = "icon" href = "img/logo.png" type = "image/x-icon">
+    <style>
+        .bghis{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bghis::before{
+        content: "";
+        background-color: #c1c9ff;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+      }
+    </style>
 </head>
 
 <body>
@@ -15,7 +32,7 @@
 <?php
   include 'nav.php';
 ?>
-
+<div class="bghis">
 	<div class="container my-3">
         <h1 class="mbtn">Transaction History</h1>
         
@@ -59,6 +76,7 @@
     </table>
 
     </div>
+</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

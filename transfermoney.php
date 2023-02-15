@@ -12,11 +12,28 @@
     <style type="text/css">
       button{
         transition: 1.5s;
+        border: 1px solid black !important;
       }
       button:hover{
         background-color:#2E8B57;
         color: white;
       }
+      .bgtrans{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bgtrans::before{
+        content: "";
+        background-color: #d7c1ff;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+      }
+}
     </style>
 </head>
 
@@ -30,8 +47,8 @@
 <?php
   include 'nav.php';
 ?>
-
-<div class="container my-3">
+<div class="bgtrans">
+    <div class="container my-3">
         <h1 class="mbtn">Transfer Money</h1>
         <br>
             <div class="row">
@@ -48,26 +65,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                <?php 
-                    while($rows=mysqli_fetch_assoc($result)){
-                ?>
-                    <tr>
-                        <td class="py-2"><?php echo $rows['id'] ?></td>
-                        <td class="py-2"><?php echo $rows['name']?></td>
-                        <td class="py-2"><?php echo $rows['email']?></td>
-                        <td class="py-2"><?php echo $rows['balance']?></td>
-                        <td><a href="selecteduserdetail.php?id= <?php echo $rows['id'] ;?>"> <button type="button" class="btn">Transact</button></a></td> 
-                    </tr>
-                <?php
-                    }
-                ?>
+                            <?php 
+                                while($rows=mysqli_fetch_assoc($result)){
+                            ?>
+                                <tr>
+                                    <td class="py-2"><?php echo $rows['id'] ?></td>
+                                    <td class="py-2"><?php echo $rows['name']?></td>
+                                    <td class="py-2"><?php echo $rows['email']?></td>
+                                    <td class="py-2"><?php echo $rows['balance']?></td>
+                                    <td><a href="selecteduserdetail.php?id= <?php echo $rows['id'] ;?>"> <button type="button" class="btn">Transact</button></a></td> 
+                                </tr>
+                            <?php
+                            }
+                            ?>
             
                         </tbody>
                     </table>
-                    </div>
                 </div>
-            </div> 
-         </div>
+            </div>
+        </div> 
+    </div>
+</div>
          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
 </body>

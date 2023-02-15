@@ -47,7 +47,7 @@
           </div>
         </div> -->
 
-        <div class="container text-center my-4">
+        <div class="secbg container text-center my-4 p-4">
           <br>
           <div class="row featurette d-flex justify-content-center align-items-center my-4">
             <div class="col-md-7">
