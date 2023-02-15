@@ -22,11 +22,11 @@
     <?php include 'nav.php';?>
     <section id="bg">
       <div class="col-sm-12 col-md my-3">
-        <div class="heading my-5" style="margin-right: 50rem; margin-left: 1.14rem">
+        <div class="heading my-5" style="margin: 1.14rem">
           <h1 class="h1cls">Welcome to TSF Bank</h1>
         </div>
 
-        <div class="container my-4" style="margin-right: 50rem; margin-left: 0.5rem;">
+        <div class="container my-4" style="margin: 0.5rem;">
             <p class="pcls">The TSF Bank offers you the option of transferring money between accounts.  You can also check your transaction history, which includes sender and receiver names, transaction amounts, and the exact date and time. 
             </p>
             <p class="pcls">Internet banking, also known as online banking or e-banking or Net Banking is a facility offered by banks and financial institutions that allows customers to use banking services over the internet. Customers need not visit their bank's branch office to avail each and every small service.
