@@ -32,7 +32,7 @@
 ?>
 
 <div class="container my-3">
-        <h1>Transfer Money</h1>
+        <h1 class="mbtn">Transfer Money</h1>
         <br>
             <div class="row">
                 <div class="col">

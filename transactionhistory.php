@@ -17,7 +17,7 @@
 ?>
 
 	<div class="container my-3">
-        <h1>Transaction History</h1>
+        <h1 class="mbtn">Transaction History</h1>
         
        <br>
        <div class="table-responsive-sm">
