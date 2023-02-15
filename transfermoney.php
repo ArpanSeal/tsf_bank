@@ -25,7 +25,7 @@
       }
       .bgtrans::before{
         content: "";
-        background-color: #d7c1ff;
+        background-color: #e3d5ff;
         position: fixed;
         width: 100vw;
         height: 100vh;
