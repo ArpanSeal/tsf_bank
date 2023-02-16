@@ -5,6 +5,10 @@
 	transition: 0.5s;
 }
 
+.togglerIcon {
+    background-image: url('../img/navbarToggler.png') !important;
+}
+
 .navbar-brand{
 	color: #4C4B4B;
 	letter-spacing: 0.5px;

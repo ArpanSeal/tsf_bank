@@ -81,11 +81,11 @@ if(isset($_POST['submit']))
 
     <style type="text/css">
     	
-		button{
+		button.btn{
 			border:none;
 			background: #d9d9d9;
 		}
-	    button:hover{
+	    button.btn:hover{
 			background-color:#2E8B57;
 			transform: scale(1.1);
 			color:white;

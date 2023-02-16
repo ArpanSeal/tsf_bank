@@ -10,11 +10,11 @@
     <link rel = "icon" href = "img/logo.png" type = "image/x-icon">
 
     <style type="text/css">
-      button{
+      button.btn{
         transition: 1.5s;
         border: 1px solid black !important;
       }
-      button:hover{
+      button.btn:hover{
         background-color:#2E8B57;
         color: white;
       }

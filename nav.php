@@ -17,7 +17,7 @@
       <div class="container-fluid">
         <a class="navbar-brand logo" href="index.php"><img src="img/logo.png" alt="logo" height=50px width=50px></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
+        <span class="togglerIcon navbar-toggler-icon" style="background-image: url('../img/navbarToggler.png');"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
