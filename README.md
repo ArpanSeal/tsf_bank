@@ -1,4 +1,4 @@
-# Bannking-System Website
+# Banking-System Website
   
 A Web Application used to transfer money between multiple users (Project contains 10 dummy users). A dummy user can also be created. The TSF Bank offers you the option of transferring money between accounts. You can also check your transaction history, which includes sender and receiver names, transaction amounts, and the exact date and time.
 A Web Application used to transfer money between multiple users (Project contains 10 dummy users). A dummy user can also be created.  
