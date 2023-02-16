@@ -111,11 +111,12 @@
     font-weight: bold;
 	transition: 0.5s;
     font-family: 'Ubuntu', sans-serif;
+    outline:none !important;
 }
 
 .mbutton:hover{
-    background-color:#007a23;
-    transform: scale(1.1);
+    background-color:#3a9800;
+    transform: scale(1.05);
 }
 
 .center{
@@ -304,6 +305,7 @@ p.pcls{
     padding: 0.375rem 0.75rem;
 
     font-size: 1rem;
+    outline: none !important;
 }
 
 .btnc{

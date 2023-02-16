@@ -6,15 +6,12 @@
     <title>Transfer Money</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/table.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel = "icon" href = "img/logo.png" type = "image/x-icon">
 
     <style type="text/css">
-      button.btn{
-        transition: 1.5s;
-        border: 1px solid black !important;
-      }
-      button.btn:hover{
+      button.nbtn:hover{
         background-color:#2E8B57;
         color: white;
       }
@@ -73,7 +70,7 @@
                                     <td class="py-2"><?php echo $rows['name']?></td>
                                     <td class="py-2"><?php echo $rows['email']?></td>
                                     <td class="py-2"><?php echo $rows['balance']?></td>
-                                    <td><a href="selecteduserdetail.php?id= <?php echo $rows['id'] ;?>"> <button type="button" class="btn">Transact</button></a></td> 
+                                    <td class="py-2"><a href="selecteduserdetail.php?id= <?php echo $rows['id'] ;?>"> <button type="button" class="nbtn btnc">Transact</button></a></td> 
                                 </tr>
                             <?php
                             }

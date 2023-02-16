@@ -80,12 +80,7 @@ if(isset($_POST['submit']))
     <link rel = "icon" href = "img/logo.png" type = "image/x-icon">
 
     <style type="text/css">
-    	
-		button.btn{
-			border:none;
-			background: #d9d9d9;
-		}
-	    button.btn:hover{
+	    button.nbtn:hover{
 			background-color:#2E8B57;
 			transform: scale(1.1);
 			color:white;
@@ -191,7 +186,7 @@ if(isset($_POST['submit']))
                 <input type="number" class="form-control" name="amount" required>   
                 <br><br>
                     <div class="text-center" >
-                <button class="btn mt-3" name="submit" type="submit" id="myBtn">Transfer</button>
+                <button class="nbtn btnc mt-3" name="submit" type="submit" id="myBtn">Transfer</button>
             </div>
         </form>
     </div>
