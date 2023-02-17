@@ -16,12 +16,14 @@
       }
       .bghis::before{
         content: "";
-        background-color: #cbd2ff;
+        filter: brightness(20%);
+        background: url('../img/historybg.jpg') no-repeat center center/cover;
         position: fixed;
         width: 100vw;
         height: 100vh;
         top: 0px;
         left: 0px;
+        opacity: 0.85;
         z-index: -1;
       }
     </style>
@@ -33,7 +35,7 @@
   include 'nav.php';
 ?>
 <div class="bghis">
-	<div class="container my-3">
+	<div class="container my-3 p-4" style="background-color: #d5ffff; border-radius: 10%">
         <h1 class="mbtn">Transaction History</h1>
         
         <br>

@@ -22,12 +22,14 @@
       }
       .bgtrans::before{
         content: "";
-        background-color: #e3d5ff;
+        filter: brightness(20%);
+        background: url('../img/cover.jpg') no-repeat center center/cover;
         position: fixed;
         width: 100vw;
         height: 100vh;
         top: 0px;
         left: 0px;
+        opacity: 0.85;
         z-index: -1;
       }
 }
@@ -45,39 +47,40 @@
   include 'nav.php';
 ?>
 <div class="bgtrans">
-    <div class="container my-3">
+    <div class="container my-3 p-4" style="background-color: #fed2db; border-radius: 5%">
         <h1 class="mbtn">Transfer Money</h1>
         <br>
             <div class="row">
                 <div class="col">
                     <div class="table-responsive-sm">
-                    <table class="table table-hover table-sm table-striped table-condensed table-bordered">
-                        <thead>
-                            <tr>
-                            <th scope="col" class="text-center py-2">Id</th>
-                            <th scope="col" class="text-center py-2">Name</th>
-                            <th scope="col" class="text-center py-2">E-Mail</th>
-                            <th scope="col" class="text-center py-2">Balance</th>
-                            <th scope="col" class="text-center py-2">Operation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php 
-                                while($rows=mysqli_fetch_assoc($result)){
-                            ?>
+                        <table class="table table-hover table-sm table-striped table-condensed table-bordered">
+                            <thead>
                                 <tr>
-                                    <td class="py-2"><?php echo $rows['id'] ?></td>
-                                    <td class="py-2"><?php echo $rows['name']?></td>
-                                    <td class="py-2"><?php echo $rows['email']?></td>
-                                    <td class="py-2"><?php echo $rows['balance']?></td>
-                                    <td class="py-2"><a href="selecteduserdetail.php?id= <?php echo $rows['id'] ;?>"> <button type="button" class="nbtn btnc">Transact</button></a></td> 
+                                <th scope="col" class="text-center py-2">Id</th>
+                                <th scope="col" class="text-center py-2">Name</th>
+                                <th scope="col" class="text-center py-2">E-Mail</th>
+                                <th scope="col" class="text-center py-2">Balance</th>
+                                <th scope="col" class="text-center py-2">Operation</th>
                                 </tr>
-                            <?php
-                            }
-                            ?>
-            
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <?php 
+                                    while($rows=mysqli_fetch_assoc($result)){
+                                ?>
+                                    <tr>
+                                        <td class="py-2"><?php echo $rows['id'] ?></td>
+                                        <td class="py-2"><?php echo $rows['name']?></td>
+                                        <td class="py-2"><?php echo $rows['email']?></td>
+                                        <td class="py-2"><?php echo $rows['balance']?></td>
+                                        <td class="py-2"><a href="selecteduserdetail.php?id= <?php echo $rows['id'] ;?>"> <button type="button" class="nbtn btnc">Transact</button></a></td> 
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div> 

@@ -92,12 +92,14 @@ if(isset($_POST['submit']))
         }
         .bgtrans::before{
             content: "";
-            background-color: #e3d5ff;
+            filter: brightness(20%);
+            background: url('../img/cover.jpg') no-repeat center center/cover;
             position: fixed;
             width: 100vw;
             height: 100vh;
             top: 0px;
             left: 0px;
+            opacity: 0.85;
             z-index: -1;
         }
     </style>
@@ -109,7 +111,7 @@ if(isset($_POST['submit']))
   include 'nav.php';
 ?>
 
-	<div class="bghis container my-3">
+	<div class="bghis container my-3 p-4" style="background-color: #fed2db; border-radius: 5%">
         <h1 class="mbtn">Transaction</h1>
         <?php
             include 'config.php';
