@@ -23,7 +23,7 @@
       .bgtrans::before{
         content: "";
         filter: brightness(20%);
-        background: url('../img/cover.jpg') no-repeat center center/cover;
+        background: url('./img/cover.jpg') no-repeat center center/cover;
         position: fixed;
         width: 100vw;
         height: 100vh;

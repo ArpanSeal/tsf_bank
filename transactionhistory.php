@@ -17,7 +17,7 @@
       .bghis::before{
         content: "";
         filter: brightness(20%);
-        background: url('../img/historybg.jpg') no-repeat center center/cover;
+        background: url('./img/historybg.jpg') no-repeat center center/cover;
         position: fixed;
         width: 100vw;
         height: 100vh;
